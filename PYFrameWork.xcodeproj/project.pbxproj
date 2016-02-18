@@ -13,7 +13,66 @@
 		1529D4041C48F32700905A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1529D4021C48F32700905A92 /* Main.storyboard */; };
 		1529D4061C48F32700905A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1529D4051C48F32700905A92 /* Assets.xcassets */; };
 		1529D4091C48F32700905A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1529D4071C48F32700905A92 /* LaunchScreen.storyboard */; };
+		153002341C6884280003128C /* PYViewControllerOrientationImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 153002311C6884280003128C /* PYViewControllerOrientationImp.m */; };
+		153002381C6885770003128C /* PYViewControllerLoadedOrientationImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 153002371C6885770003128C /* PYViewControllerLoadedOrientationImp.m */; };
+		1530023C1C68862C0003128C /* UINavigationControllerMenusImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1530023B1C68862C0003128C /* UINavigationControllerMenusImp.m */; };
+		156A08C61C60EADA00770B63 /* PYFrameWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 156A08C51C60EADA00770B63 /* PYFrameWork.m */; };
+		157E9FED1C64CEFF0049C14D /* UIViewController(piofo).m in Sources */ = {isa = PBXBuildFile; fileRef = 157E9FE71C64CEFF0049C14D /* UIViewController(piofo).m */; };
+		1592B5EF1C60B19400C0C8CD /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1592B5EE1C60B19400C0C8CD /* Utile.framework */; };
+		1593637E1C6C363900D40074 /* PYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1593637D1C6C363900D40074 /* PYButton.m */; };
+		15A6D8131C75694C008EFBF2 /* PYFrameWork.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A6D8121C75694C008EFBF2 /* PYFrameWork.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A6D8171C75694C008EFBF2 /* PYFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */; };
+		15A6D8181C75694C008EFBF2 /* PYFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15A6D81D1C7569DC008EFBF2 /* PYFrameWorkParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B1105B1C74543600033370 /* PYFrameWorkParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A6D81E1C7569DC008EFBF2 /* PYFrameWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 156A08C41C60EADA00770B63 /* PYFrameWork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A6D81F1C7569DC008EFBF2 /* PYBarButtonItemTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15DCA30D1C61A2B900F0A8B9 /* PYBarButtonItemTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A6D8201C7569DC008EFBF2 /* PYNavigationBarTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15DCA30A1C619B4A00F0A8B9 /* PYNavigationBarTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A6D8211C7569F5008EFBF2 /* UINavgationBarImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B110641C746ACB00033370 /* UINavgationBarImp.m */; };
+		15A6D8221C7569F5008EFBF2 /* UINavigationControllerMenusImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1530023B1C68862C0003128C /* UINavigationControllerMenusImp.m */; };
+		15A6D8231C7569F5008EFBF2 /* PYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1593637D1C6C363900D40074 /* PYButton.m */; };
+		15A6D8241C7569F5008EFBF2 /* PYViewControllerLoadedOrientationImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 153002371C6885770003128C /* PYViewControllerLoadedOrientationImp.m */; };
+		15A6D8251C7569F5008EFBF2 /* PYViewControllerOrientationImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 153002311C6884280003128C /* PYViewControllerOrientationImp.m */; };
+		15A6D8261C7569F5008EFBF2 /* UIViewController(piofo).m in Sources */ = {isa = PBXBuildFile; fileRef = 157E9FE71C64CEFF0049C14D /* UIViewController(piofo).m */; };
+		15A6D8271C7569F5008EFBF2 /* PYFrameWorkParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B1105C1C74543600033370 /* PYFrameWorkParam.m */; };
+		15A6D8281C7569F5008EFBF2 /* PYFrameWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 156A08C51C60EADA00770B63 /* PYFrameWork.m */; };
+		15A6D8291C7569F5008EFBF2 /* PYToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA3111C61AAD800F0A8B9 /* PYToolBarView.m */; };
+		15A6D82A1C7569F5008EFBF2 /* PYBarButtonItemTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA30E1C61A2B900F0A8B9 /* PYBarButtonItemTools.m */; };
+		15A6D82B1C7569F5008EFBF2 /* PYNavigationBarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA30B1C619B4A00F0A8B9 /* PYNavigationBarTools.m */; };
+		15A6D82C1C756A5F008EFBF2 /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1592B5EE1C60B19400C0C8CD /* Utile.framework */; };
+		15B1105A1C74508C00033370 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B110591C74508C00033370 /* 1@2x.png */; };
+		15B1105D1C74543600033370 /* PYFrameWorkParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B1105C1C74543600033370 /* PYFrameWorkParam.m */; };
+		15B110601C7457F700033370 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B1105E1C7457F700033370 /* 2@2x.png */; };
+		15B110611C7457F700033370 /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B1105F1C7457F700033370 /* 3@2x.png */; };
+		15B110651C746ACB00033370 /* UINavgationBarImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B110641C746ACB00033370 /* UINavgationBarImp.m */; };
+		15DCA30C1C619B4A00F0A8B9 /* PYNavigationBarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA30B1C619B4A00F0A8B9 /* PYNavigationBarTools.m */; };
+		15DCA30F1C61A2B900F0A8B9 /* PYBarButtonItemTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA30E1C61A2B900F0A8B9 /* PYBarButtonItemTools.m */; };
+		15DCA3121C61AAD800F0A8B9 /* PYToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA3111C61AAD800F0A8B9 /* PYToolBarView.m */; };
+		15EC28E01C4C8A0F00032949 /* ViewController02.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EC28DF1C4C8A0F00032949 /* ViewController02.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15A6D8151C75694C008EFBF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1529D3EE1C48F32700905A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A6D80F1C75694C008EFBF2;
+			remoteInfo = PYFrameWork.framework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15A6D81C1C75694C008EFBF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15A6D8181C75694C008EFBF2 /* PYFrameWork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1529D3F61C48F32700905A92 /* PYFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +85,37 @@
 		1529D4051C48F32700905A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1529D4081C48F32700905A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1529D40A1C48F32700905A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		153002301C6884280003128C /* PYViewControllerOrientationImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYViewControllerOrientationImp.h; sourceTree = "<group>"; };
+		153002311C6884280003128C /* PYViewControllerOrientationImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYViewControllerOrientationImp.m; sourceTree = "<group>"; };
+		153002361C6885770003128C /* PYViewControllerLoadedOrientationImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYViewControllerLoadedOrientationImp.h; sourceTree = "<group>"; };
+		153002371C6885770003128C /* PYViewControllerLoadedOrientationImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYViewControllerLoadedOrientationImp.m; sourceTree = "<group>"; };
+		1530023A1C68862C0003128C /* UINavigationControllerMenusImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerMenusImp.h; sourceTree = "<group>"; };
+		1530023B1C68862C0003128C /* UINavigationControllerMenusImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerMenusImp.m; sourceTree = "<group>"; };
+		156A08C41C60EADA00770B63 /* PYFrameWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYFrameWork.h; sourceTree = "<group>"; };
+		156A08C51C60EADA00770B63 /* PYFrameWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYFrameWork.m; sourceTree = "<group>"; };
+		157E9FE61C64CEFF0049C14D /* UIViewController(piofo).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController(piofo).h"; sourceTree = "<group>"; };
+		157E9FE71C64CEFF0049C14D /* UIViewController(piofo).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController(piofo).m"; sourceTree = "<group>"; };
+		1592B5EE1C60B19400C0C8CD /* Utile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utile.framework; sourceTree = "<group>"; };
+		1593637C1C6C363900D40074 /* PYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYButton.h; sourceTree = "<group>"; };
+		1593637D1C6C363900D40074 /* PYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYButton.m; sourceTree = "<group>"; };
+		15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PYFrameWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A6D8121C75694C008EFBF2 /* PYFrameWork.framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYFrameWork.framework.h; sourceTree = "<group>"; };
+		15A6D8141C75694C008EFBF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15B110591C74508C00033370 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		15B1105B1C74543600033370 /* PYFrameWorkParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYFrameWorkParam.h; sourceTree = "<group>"; };
+		15B1105C1C74543600033370 /* PYFrameWorkParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYFrameWorkParam.m; sourceTree = "<group>"; };
+		15B1105E1C7457F700033370 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
+		15B1105F1C7457F700033370 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
+		15B110631C746ACB00033370 /* UINavgationBarImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavgationBarImp.h; sourceTree = "<group>"; };
+		15B110641C746ACB00033370 /* UINavgationBarImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavgationBarImp.m; sourceTree = "<group>"; };
+		15DCA30A1C619B4A00F0A8B9 /* PYNavigationBarTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYNavigationBarTools.h; sourceTree = "<group>"; };
+		15DCA30B1C619B4A00F0A8B9 /* PYNavigationBarTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYNavigationBarTools.m; sourceTree = "<group>"; };
+		15DCA30D1C61A2B900F0A8B9 /* PYBarButtonItemTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBarButtonItemTools.h; sourceTree = "<group>"; };
+		15DCA30E1C61A2B900F0A8B9 /* PYBarButtonItemTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBarButtonItemTools.m; sourceTree = "<group>"; };
+		15DCA3101C61AAD800F0A8B9 /* PYToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYToolBarView.h; sourceTree = "<group>"; };
+		15DCA3111C61AAD800F0A8B9 /* PYToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYToolBarView.m; sourceTree = "<group>"; };
+		15EC28DE1C4C8A0F00032949 /* ViewController02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController02.h; sourceTree = "<group>"; };
+		15EC28DF1C4C8A0F00032949 /* ViewController02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController02.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +123,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A6D8171C75694C008EFBF2 /* PYFrameWork.framework in Frameworks */,
+				1592B5EF1C60B19400C0C8CD /* Utile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A6D80C1C75694C008EFBF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6D82C1C756A5F008EFBF2 /* Utile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +142,12 @@
 		1529D3ED1C48F32700905A92 = {
 			isa = PBXGroup;
 			children = (
+				15B1105E1C7457F700033370 /* 2@2x.png */,
+				15B1105F1C7457F700033370 /* 3@2x.png */,
+				15B110591C74508C00033370 /* 1@2x.png */,
+				1592B5EE1C60B19400C0C8CD /* Utile.framework */,
 				1529D3F81C48F32700905A92 /* PYFrameWork */,
+				15A6D8111C75694C008EFBF2 /* PYFrameWork.framework */,
 				1529D3F71C48F32700905A92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1529D3F61C48F32700905A92 /* PYFrameWork.app */,
+				15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,10 +164,25 @@
 		1529D3F81C48F32700905A92 /* PYFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				15B110621C746AA400033370 /* Navigation */,
+				153002391C68862C0003128C /* Menu */,
+				157E9FE31C64CEA90049C14D /* Orientation */,
+				15B1105B1C74543600033370 /* PYFrameWorkParam.h */,
+				15B1105C1C74543600033370 /* PYFrameWorkParam.m */,
+				156A08C41C60EADA00770B63 /* PYFrameWork.h */,
+				156A08C51C60EADA00770B63 /* PYFrameWork.m */,
+				15DCA3101C61AAD800F0A8B9 /* PYToolBarView.h */,
+				15DCA3111C61AAD800F0A8B9 /* PYToolBarView.m */,
+				15DCA30D1C61A2B900F0A8B9 /* PYBarButtonItemTools.h */,
+				15DCA30E1C61A2B900F0A8B9 /* PYBarButtonItemTools.m */,
+				15DCA30A1C619B4A00F0A8B9 /* PYNavigationBarTools.h */,
+				15DCA30B1C619B4A00F0A8B9 /* PYNavigationBarTools.m */,
 				1529D3FC1C48F32700905A92 /* AppDelegate.h */,
 				1529D3FD1C48F32700905A92 /* AppDelegate.m */,
 				1529D3FF1C48F32700905A92 /* ViewController.h */,
 				1529D4001C48F32700905A92 /* ViewController.m */,
+				15EC28DE1C4C8A0F00032949 /* ViewController02.h */,
+				15EC28DF1C4C8A0F00032949 /* ViewController02.m */,
 				1529D4021C48F32700905A92 /* Main.storyboard */,
 				1529D4051C48F32700905A92 /* Assets.xcassets */,
 				1529D4071C48F32700905A92 /* LaunchScreen.storyboard */,
@@ -79,7 +200,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		153002391C68862C0003128C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1530023A1C68862C0003128C /* UINavigationControllerMenusImp.h */,
+				1530023B1C68862C0003128C /* UINavigationControllerMenusImp.m */,
+				1593637C1C6C363900D40074 /* PYButton.h */,
+				1593637D1C6C363900D40074 /* PYButton.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		157E9FE31C64CEA90049C14D /* Orientation */ = {
+			isa = PBXGroup;
+			children = (
+				153002361C6885770003128C /* PYViewControllerLoadedOrientationImp.h */,
+				153002371C6885770003128C /* PYViewControllerLoadedOrientationImp.m */,
+				153002301C6884280003128C /* PYViewControllerOrientationImp.h */,
+				153002311C6884280003128C /* PYViewControllerOrientationImp.m */,
+				157E9FE61C64CEFF0049C14D /* UIViewController(piofo).h */,
+				157E9FE71C64CEFF0049C14D /* UIViewController(piofo).m */,
+			);
+			path = Orientation;
+			sourceTree = "<group>";
+		};
+		15A6D8111C75694C008EFBF2 /* PYFrameWork.framework */ = {
+			isa = PBXGroup;
+			children = (
+				15A6D8121C75694C008EFBF2 /* PYFrameWork.framework.h */,
+				15A6D8141C75694C008EFBF2 /* Info.plist */,
+			);
+			path = PYFrameWork.framework;
+			sourceTree = "<group>";
+		};
+		15B110621C746AA400033370 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				15B110631C746ACB00033370 /* UINavgationBarImp.h */,
+				15B110641C746ACB00033370 /* UINavgationBarImp.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15A6D80D1C75694C008EFBF2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6D8131C75694C008EFBF2 /* PYFrameWork.framework.h in Headers */,
+				15A6D81D1C7569DC008EFBF2 /* PYFrameWorkParam.h in Headers */,
+				15A6D81E1C7569DC008EFBF2 /* PYFrameWork.h in Headers */,
+				15A6D81F1C7569DC008EFBF2 /* PYBarButtonItemTools.h in Headers */,
+				15A6D8201C7569DC008EFBF2 /* PYNavigationBarTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1529D3F51C48F32700905A92 /* PYFrameWork */ = {
@@ -89,15 +267,35 @@
 				1529D3F21C48F32700905A92 /* Sources */,
 				1529D3F31C48F32700905A92 /* Frameworks */,
 				1529D3F41C48F32700905A92 /* Resources */,
+				15A6D81C1C75694C008EFBF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				15A6D8161C75694C008EFBF2 /* PBXTargetDependency */,
 			);
 			name = PYFrameWork;
 			productName = PYFrameWork;
 			productReference = 1529D3F61C48F32700905A92 /* PYFrameWork.app */;
 			productType = "com.apple.product-type.application";
+		};
+		15A6D80F1C75694C008EFBF2 /* PYFrameWork.framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A6D81B1C75694C008EFBF2 /* Build configuration list for PBXNativeTarget "PYFrameWork.framework" */;
+			buildPhases = (
+				15A6D80B1C75694C008EFBF2 /* Sources */,
+				15A6D80C1C75694C008EFBF2 /* Frameworks */,
+				15A6D80D1C75694C008EFBF2 /* Headers */,
+				15A6D80E1C75694C008EFBF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PYFrameWork.framework;
+			productName = PYFrameWork.framework;
+			productReference = 15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +307,9 @@
 				ORGANIZATIONNAME = wlpiaoyi;
 				TargetAttributes = {
 					1529D3F51C48F32700905A92 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					15A6D80F1C75694C008EFBF2 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -127,6 +328,7 @@
 			projectRoot = "";
 			targets = (
 				1529D3F51C48F32700905A92 /* PYFrameWork */,
+				15A6D80F1C75694C008EFBF2 /* PYFrameWork.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -136,9 +338,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B110611C7457F700033370 /* 3@2x.png in Resources */,
 				1529D4091C48F32700905A92 /* LaunchScreen.storyboard in Resources */,
 				1529D4061C48F32700905A92 /* Assets.xcassets in Resources */,
+				15B110601C7457F700033370 /* 2@2x.png in Resources */,
+				15B1105A1C74508C00033370 /* 1@2x.png in Resources */,
 				1529D4041C48F32700905A92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A6D80E1C75694C008EFBF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,11 +363,49 @@
 			files = (
 				1529D4011C48F32700905A92 /* ViewController.m in Sources */,
 				1529D3FE1C48F32700905A92 /* AppDelegate.m in Sources */,
+				153002341C6884280003128C /* PYViewControllerOrientationImp.m in Sources */,
+				1593637E1C6C363900D40074 /* PYButton.m in Sources */,
+				15B110651C746ACB00033370 /* UINavgationBarImp.m in Sources */,
+				15DCA30C1C619B4A00F0A8B9 /* PYNavigationBarTools.m in Sources */,
 				1529D3FB1C48F32700905A92 /* main.m in Sources */,
+				15EC28E01C4C8A0F00032949 /* ViewController02.m in Sources */,
+				15B1105D1C74543600033370 /* PYFrameWorkParam.m in Sources */,
+				15DCA3121C61AAD800F0A8B9 /* PYToolBarView.m in Sources */,
+				153002381C6885770003128C /* PYViewControllerLoadedOrientationImp.m in Sources */,
+				15DCA30F1C61A2B900F0A8B9 /* PYBarButtonItemTools.m in Sources */,
+				157E9FED1C64CEFF0049C14D /* UIViewController(piofo).m in Sources */,
+				1530023C1C68862C0003128C /* UINavigationControllerMenusImp.m in Sources */,
+				156A08C61C60EADA00770B63 /* PYFrameWork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A6D80B1C75694C008EFBF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6D8211C7569F5008EFBF2 /* UINavgationBarImp.m in Sources */,
+				15A6D8221C7569F5008EFBF2 /* UINavigationControllerMenusImp.m in Sources */,
+				15A6D8231C7569F5008EFBF2 /* PYButton.m in Sources */,
+				15A6D8241C7569F5008EFBF2 /* PYViewControllerLoadedOrientationImp.m in Sources */,
+				15A6D8251C7569F5008EFBF2 /* PYViewControllerOrientationImp.m in Sources */,
+				15A6D8261C7569F5008EFBF2 /* UIViewController(piofo).m in Sources */,
+				15A6D8271C7569F5008EFBF2 /* PYFrameWorkParam.m in Sources */,
+				15A6D8281C7569F5008EFBF2 /* PYFrameWork.m in Sources */,
+				15A6D8291C7569F5008EFBF2 /* PYToolBarView.m in Sources */,
+				15A6D82A1C7569F5008EFBF2 /* PYBarButtonItemTools.m in Sources */,
+				15A6D82B1C7569F5008EFBF2 /* PYNavigationBarTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15A6D8161C75694C008EFBF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A6D80F1C75694C008EFBF2 /* PYFrameWork.framework */;
+			targetProxy = 15A6D8151C75694C008EFBF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1529D4021C48F32700905A92 /* Main.storyboard */ = {
@@ -263,8 +513,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PYFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PYFrameWork.PYFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -274,10 +530,68 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PYFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PYFrameWork.PYFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		15A6D8191C75694C008EFBF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PYFrameWork.framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "PYFrameWork.PYFrameWork-framework";
+				PRODUCT_NAME = PYFrameWork;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15A6D81A1C75694C008EFBF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PYFrameWork.framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "PYFrameWork.PYFrameWork-framework";
+				PRODUCT_NAME = PYFrameWork;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -298,6 +612,15 @@
 			buildConfigurations = (
 				1529D40E1C48F32700905A92 /* Debug */,
 				1529D40F1C48F32700905A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A6D81B1C75694C008EFBF2 /* Build configuration list for PBXNativeTarget "PYFrameWork.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A6D8191C75694C008EFBF2 /* Debug */,
+				15A6D81A1C75694C008EFBF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PYFrameWork.h"
+#import <Utile/UIImage+Expand.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +18,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [PYFrameWork orientationWithSupportedInterface:UIInterfaceOrientationMaskAllButUpsideDown preferredInterfaceOrientation:UIInterfaceOrientationPortrait];
+    id a = @[
+             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"},
+             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc02"},
+             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"},
+             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc02"},
+             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"}
+             ];
+    UIImage * image1 = [UIImage imageNamed:@"1.png"];
+    UIImage * image2 = [UIImage imageNamed:@"2.png"];
+    UIImage * image3 = [UIImage imageNamed:@"3.png"];
+    
+    UIImage * image11 = [UIImage imageWithColor:[UIColor yellowColor]];
+    UIImage * image22 = [UIImage imageWithColor:[UIColor blueColor]];
+    UIImage * image33 = [UIImage imageWithColor:[UIColor greenColor]];
+    UIFont * font = [UIFont boldSystemFontOfSize:8];
+    
+    id b = @{
+             @(0):@{NCHVMenuTitle:@"1",NCHVMenuFont:font,NCHVMenuColorNormal:[UIColor grayColor],NCHVMenuColorSelected:[UIColor orangeColor],NCHVMenuImageNormal:image1,NCHVMenuImageHighlight:image2,NCHVMenuImageSelected:image3,NCHVMenuBgimageNormal:image11,NCHVMenuBgimageSelected:image33,NCHVMenuBgimageHighlight:image22},
+             @(1):@{NCHVMenuTitle:@"2",NCHVMenuFont:font,NCHVMenuColorNormal:[UIColor grayColor],NCHVMenuColorSelected:[UIColor orangeColor],NCHVMenuImageNormal:image1,NCHVMenuImageHighlight:image2,NCHVMenuImageSelected:image3,NCHVMenuBgimageNormal:image11,NCHVMenuBgimageSelected:image33,NCHVMenuBgimageHighlight:image22},
+             @(2):@{NCHVMenuTitle:@"3",NCHVMenuFont:font,NCHVMenuColorNormal:[UIColor grayColor],NCHVMenuColorSelected:[UIColor orangeColor],NCHVMenuImageNormal:image1,NCHVMenuImageHighlight:image2,NCHVMenuImageSelected:image3,NCHVMenuBgimageNormal:image11,NCHVMenuBgimageSelected:image33,NCHVMenuBgimageHighlight:image22},
+             @(3):@{NCHVMenuTitle:@"4",NCHVMenuFont:font,NCHVMenuColorNormal:[UIColor grayColor],NCHVMenuColorSelected:[UIColor orangeColor],NCHVMenuImageNormal:image1,NCHVMenuImageHighlight:image2,NCHVMenuImageSelected:image3,NCHVMenuBgimageNormal:image11,NCHVMenuBgimageSelected:image33,NCHVMenuBgimageHighlight:image22},
+             @(4):@{NCHVMenuTitle:@"5",NCHVMenuFont:font,NCHVMenuColorNormal:[UIColor grayColor],NCHVMenuColorSelected:[UIColor orangeColor],NCHVMenuImageNormal:image1,NCHVMenuImageHighlight:image2,NCHVMenuImageSelected:image3,NCHVMenuBgimageNormal:image11,NCHVMenuBgimageSelected:image33,NCHVMenuBgimageHighlight:image22},
+             };
+    
+    [PYFrameWork toolBarWithMenusInfo:a menusAction:b];
+    
+    [PYFrameWork navigatonBar];
+    
     return YES;
 }
 
