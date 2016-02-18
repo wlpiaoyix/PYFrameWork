@@ -41,7 +41,7 @@ static id<UIViewcontrollerHookViewDelegate> xUINavigationBarImp;
     
 }
 
-+(void) toolBarWithMenusInfo:(NSArray<NSDictionary<NSString *, NSString *> *> *)menusInfo menusAction:(NSDictionary<NSNumber *,NSDictionary<NSString *,NSString *> *> *)menusAction{
++(void) toolBarWithMenusInfo:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)menusInfo menusAction:(NSDictionary<NSNumber *,NSDictionary<NSString *,NSString *> *> * _Nonnull)menusAction{
     xUINavigationControllerMenusImp =[UINavigationControllerMenusImp new];
     [UIViewController addDelegateView:xUINavigationControllerMenusImp];
 
@@ -49,8 +49,9 @@ static id<UIViewcontrollerHookViewDelegate> xUINavigationBarImp;
     ((UINavigationControllerMenusImp*)xUINavigationControllerMenusImp).menusAction = menusAction;
 }
 
-+(void) navigatonBar{
++(void) navigatonBarWithBlock:(void (^_Nonnull) (UIViewController * _Nonnull curVc, PYNavigationBarTools * _Nonnull ntbTools)) blok{
     xUINavigationBarImp = [UINavgationBarImp new];
+    ((UINavgationBarImp*)xUINavigationBarImp).blockSetNavationBar = blok;
     [UIViewController addDelegateView:xUINavigationBarImp];
 }
 

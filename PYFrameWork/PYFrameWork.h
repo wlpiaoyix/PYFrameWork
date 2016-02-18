@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "PYFrameWorkParam.h"
+#import "PYNavigationBarTools.h"
 
 @interface PYFrameWork : NSObject
 
 +(void) orientationWithSupportedInterface:(NSUInteger) supportedInterface preferredInterfaceOrientation:(UIInterfaceOrientation) preferredInterfaceOrientation;
 
-+(void) toolBarWithMenusInfo:(NSArray<NSDictionary<NSString *, NSString *> *> *)menusInfo menusAction:(NSDictionary<NSNumber *,NSDictionary<NSString *,NSString *> *> *)menusAction;
++(void) toolBarWithMenusInfo:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)menusInfo menusAction:(NSDictionary<NSNumber *,NSDictionary<NSString *,NSString *> *> * _Nonnull)menusAction;
 
-+(void) navigatonBar;
++(void) navigatonBarWithBlock:(void (^_Nonnull) (UIViewController * _Nonnull curVc, PYNavigationBarTools * _Nonnull ntbTools)) blok;
 
 @end

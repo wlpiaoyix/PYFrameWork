@@ -60,8 +60,7 @@ UIFont *GlobleNavigationBarTitleFont;
     [navigationBar setTitleTextAttributes:titleTextAttributes];
     
     [navigationBar setTintColor:GlobleNavigationBarTintColor];
-    
-    [self setBackgourndColor:GlobleNavigationBarBackgroundColor navigationBar:navigationBar];
+
 }
 
 /*>>========================各个属性的设置==========================*/

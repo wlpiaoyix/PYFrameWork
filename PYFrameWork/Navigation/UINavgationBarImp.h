@@ -7,7 +7,8 @@
 //
 
 #import <Utile/UIViewController+HookView.h>
+#import "PYNavigationBarTools.h"
 
 @interface UINavgationBarImp : NSObject<UIViewcontrollerHookViewDelegate>
-@property (nonatomic, copy, nullable) void (^blockSetNavationBar) (UIViewController * _Nonnull curVc);
+@property (nonatomic, copy, nullable) void (^blockSetNavationBar) (UIViewController * _Nonnull curVc, PYNavigationBarTools * _Nonnull ntbTools);
 @end

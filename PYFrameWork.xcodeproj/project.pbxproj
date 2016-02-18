@@ -21,8 +21,6 @@
 		1592B5EF1C60B19400C0C8CD /* Utile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1592B5EE1C60B19400C0C8CD /* Utile.framework */; };
 		1593637E1C6C363900D40074 /* PYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1593637D1C6C363900D40074 /* PYButton.m */; };
 		15A6D8131C75694C008EFBF2 /* PYFrameWork.framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A6D8121C75694C008EFBF2 /* PYFrameWork.framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15A6D8171C75694C008EFBF2 /* PYFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */; };
-		15A6D8181C75694C008EFBF2 /* PYFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6D8101C75694C008EFBF2 /* PYFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15A6D81D1C7569DC008EFBF2 /* PYFrameWorkParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B1105B1C74543600033370 /* PYFrameWorkParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A6D81E1C7569DC008EFBF2 /* PYFrameWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 156A08C41C60EADA00770B63 /* PYFrameWork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A6D81F1C7569DC008EFBF2 /* PYBarButtonItemTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 15DCA30D1C61A2B900F0A8B9 /* PYBarButtonItemTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,30 +47,6 @@
 		15DCA3121C61AAD800F0A8B9 /* PYToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCA3111C61AAD800F0A8B9 /* PYToolBarView.m */; };
 		15EC28E01C4C8A0F00032949 /* ViewController02.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EC28DF1C4C8A0F00032949 /* ViewController02.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		15A6D8151C75694C008EFBF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1529D3EE1C48F32700905A92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15A6D80F1C75694C008EFBF2;
-			remoteInfo = PYFrameWork.framework;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		15A6D81C1C75694C008EFBF2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				15A6D8181C75694C008EFBF2 /* PYFrameWork.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1529D3F61C48F32700905A92 /* PYFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A6D8171C75694C008EFBF2 /* PYFrameWork.framework in Frameworks */,
 				1592B5EF1C60B19400C0C8CD /* Utile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,12 +240,10 @@
 				1529D3F21C48F32700905A92 /* Sources */,
 				1529D3F31C48F32700905A92 /* Frameworks */,
 				1529D3F41C48F32700905A92 /* Resources */,
-				15A6D81C1C75694C008EFBF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				15A6D8161C75694C008EFBF2 /* PBXTargetDependency */,
 			);
 			name = PYFrameWork;
 			productName = PYFrameWork;
@@ -398,14 +369,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		15A6D8161C75694C008EFBF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 15A6D80F1C75694C008EFBF2 /* PYFrameWork.framework */;
-			targetProxy = 15A6D8151C75694C008EFBF2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1529D4021C48F32700905A92 /* Main.storyboard */ = {
@@ -623,6 +586,7 @@
 				15A6D81A1C75694C008EFBF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

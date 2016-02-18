@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PYFrameWork.h"
 #import <Utile/UIImage+Expand.h>
+#import "PYNavigationBarTools.h"
 
 @interface AppDelegate ()
 
@@ -46,7 +47,12 @@
     
     [PYFrameWork toolBarWithMenusInfo:a menusAction:b];
     
-    [PYFrameWork navigatonBar];
+    [PYFrameWork navigatonBarWithBlock:^(UIViewController * _Nonnull curVc, PYNavigationBarTools * _Nonnull ntbTools) {
+        if (!curVc.navigationController) {
+            return;
+        }
+        [ntbTools setBackgourndColor:[UIColor blueColor] navigationBar:curVc.navigationController.navigationBar];
+    }];
     
     return YES;
 }

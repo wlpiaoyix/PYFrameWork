@@ -7,9 +7,11 @@
 //
 
 #import "UINavgationBarImp.h"
-#import "PYNavigationBarTools.h"
 #import <Utile/PYUtile.h>
 #import <Utile/PYHook.h>
+@interface UINavgationBarImp()
+@property (nonatomic, strong) PYNavigationBarTools * ntbTools;
+@end
 
 @implementation UINavgationBarImp
 
@@ -24,7 +26,7 @@
 }
 -(instancetype) init{
     if (self = [super init]) {
-        
+        self.ntbTools = [PYNavigationBarTools new];
     }
     return self;
 }
@@ -37,7 +39,6 @@
         return;
     }
     
-    [[PYNavigationBarTools new] setDefaultStyle:target.navigationController.navigationBar];
     
     [target.navigationController setNavigationBarHidden:NO];
     
@@ -45,9 +46,11 @@
         [[UIApplication sharedApplication] setStatusBarStyle:[target preferredStatusBarStyle] animated:NO];
     }
     
+    [self.ntbTools setDefaultStyle:target.navigationController.navigationBar];
     if (self.blockSetNavationBar) {
-        _blockSetNavationBar(target);
+        _blockSetNavationBar(target, self.ntbTools);
     }
+    
     
 }
 
@@ -74,7 +77,7 @@
     CGRect rectNavigationBar = vc.navigationBar.frame;
     CGRect rectToolBar = vc.toolbar.frame;
     
-    CGRect rectCurView = CGRectMake(0, rectNavigationBar.origin.y + rectNavigationBar.size.height, rectNavigationBar.size.width, vc.view.frame.size.height - rectNavigationBar.origin.y - rectNavigationBar.size.height - (vc.toolbarHidden ? 0 : rectToolBar.size.height));
+    CGRect rectCurView = CGRectMake(0, 0, rectNavigationBar.size.width, vc.view.frame.size.height - - (vc.toolbarHidden ? 0 : rectToolBar.size.height));
     
     CGRect rectPerView = [PYUtile getCurrentController].view.frame;
     if (rectCurView.origin.x == rectPerView.origin.x && rectPerView.origin.y == rectCurView.origin.y && rectCurView.size.width == rectPerView.size.width && rectCurView.size.height == rectPerView.size.height) {
