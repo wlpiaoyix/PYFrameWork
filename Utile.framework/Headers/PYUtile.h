@@ -62,6 +62,10 @@ double parseRadiansToDegrees(double radians);
  经纬度转换距离 (KM)
  */
 double parseCoordinateToDistance(double lat1, double lng1, double lat2, double lng2);
+/**
+ cup使用率
+ */
+float cpu_usage();
 
 @interface PYUtile : NSObject
 

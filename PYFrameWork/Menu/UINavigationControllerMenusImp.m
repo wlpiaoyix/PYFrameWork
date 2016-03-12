@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import "PYToolBarView.h"
 #import <Utile/EXTScope.h>
+#import <Utile/UIView+Expand.h>
+#import <Utile/PYUtile.h>
 #import "PYButton.h"
 
 @interface UINavigationControllerMenusImp()
@@ -32,24 +34,22 @@
     return self;
 }
 
--(void) beforeExcuteViewDidLoad:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
-    *isExcute = true;
-}
--(void) afterExcuteViewDidLoadWithTarget:(nonnull UIViewController *) target{
-    if (![target isKindOfClass:[UINavigationController class]]) {
-        return;
-    }
-    self.navigationRoot = (UINavigationController*)target;
-    
-    ((UINavigationController*)target).toolbarHidden = NO;
-    [((UINavigationController*)target).toolbar addSubview:self.toolBarView];
-    self.toolBarView.maxShow = 4;
-}
-
 -(void) beforeExcuteViewWillAppear:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
     *isExcute = true;
 }
 -(void) afterExcuteViewWillAppearWithTarget:(nonnull UIViewController *) target{
+    if (![target isKindOfClass:[UINavigationController class]]) {
+        return;
+    }
+    
+    [self.toolBarView removeFromSuperview];
+    
+    self.navigationRoot = (UINavigationController*)target;
+    
+    ((UINavigationController*)target).toolbarHidden = NO;
+    [((UINavigationController*)target).toolbar addSubview:self.toolBarView];
+    
+    self.toolBarView.maxShow = 4;
 }
 
 -(void) beforeExcuteViewDidLayoutSubviews:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
@@ -59,6 +59,7 @@
     if (![target isKindOfClass:[UINavigationController class]]) {
         return;
     }
+    
     self.toolBarView.frame = ((UINavigationController*)target).toolbar.bounds;
 }
 
@@ -84,6 +85,18 @@
     }
     
     self.toolBarView.buttonMenus = self.buttons;
+    
+}
+
+-(void) setShowIndex:(NSUInteger)showIndex{
+    
+    if ([self.buttons count] <= showIndex) {
+        return;
+    }
+    
+    _showIndex = showIndex;
+    
+    [self onclickMenu:self.buttons[showIndex]];
     
 }
 -(BOOL) createButton{
@@ -171,72 +184,99 @@
 
 -(void) onclickMenu:(PYButton *) button{
     
-    NSDictionary<NSString *, NSString *> * info = self.menusInfo[button.index];
+    NSNumber * currentIndex = @(button.index);
+    NSNumber * currentNaindex = @(button.index + 100);
     
-    NSString * interfaceBuilderName = info[(NSString*)NCHVMenuInterfaceBuilderName];
-    NSString * className = info[(NSString*)NCHVMenuClassName];
-    NSString * storyBoardName = info[(NSString*)NCHVMenuStoryBoardName];
-    NSString * storyBoardIdentify = info[(NSString*)NCHVMenuStoryBoardIdentify];
-    
-    NSArray<__kindof UIViewController *> * showControllers = nil;
-    
-    NSString * actionName = nil;
-    
-    if (interfaceBuilderName) {
-        actionName = interfaceBuilderName;
-    }else if(className){
-        actionName = className;
-    }else if(storyBoardName){
-        actionName = [NSString stringWithFormat:@"%@_%@",storyBoardName, storyBoardIdentify ? storyBoardIdentify : @"defaultId"];
+    for (NSNumber * key in self.dictControllers.allKeys) {
+        NSArray<__kindof UIViewController *> * _showControllers_ = self.dictControllers[key];
+        if (_showControllers_.firstObject == self.navigationRoot.viewControllers.firstObject) {
+            NSInteger perIndex = key.integerValue;
+            self.dictControllers[key] = self.navigationRoot.viewControllers;
+            self.dictControllers[@(perIndex + 100)] = @[self.navigationRoot];
+            break;
+        }
     }
+
     
-    if (actionName && !(showControllers = self.dictControllers[@(button.index)])) {
+    NSArray<__kindof UIViewController *> * showControllers = self.dictControllers[currentIndex];
+    if (self.dictControllers[currentNaindex].firstObject) {
+        self.navigationRoot = self.dictControllers[currentNaindex].firstObject;
+    }
+    if (!showControllers) {
+        
+        NSDictionary<NSString *, NSString *> * info = self.menusInfo[currentIndex.integerValue];
+        
+        NSString * interfaceBuilderName = info[(NSString*)NCHVMenuInterfaceBuilderName];
+        NSString * className = info[(NSString*)NCHVMenuClassName];
+        NSString * storyBoardName = info[(NSString*)NCHVMenuStoryBoardName];
+        NSString * storyBoardIdentify = info[(NSString*)NCHVMenuStoryBoardIdentify];
+        
+        NSString * actionName = nil;
         
         if (interfaceBuilderName) {
-            
-            Class actionClass = NSClassFromString(actionName);
-            showControllers = @[[[actionClass alloc] initWithNibName:actionName bundle:nil]];
-            
+            actionName = interfaceBuilderName;
         }else if(className){
-            
-            Class actionClass = NSClassFromString(actionName);
-            showControllers = @[[actionClass new]];
-            
+            actionName = className;
         }else if(storyBoardName){
-            
-            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyBoardName bundle:[NSBundle mainBundle]];
-            
-            if (storyBoardIdentify) {
-                showControllers = @[[storyboard instantiateViewControllerWithIdentifier:storyBoardIdentify]];
-            }else{
-                showControllers = @[storyboard.instantiateInitialViewController];
-            }
-
+            actionName = [NSString stringWithFormat:@"%@_%@",storyBoardName, storyBoardIdentify ? storyBoardIdentify : @"defaultId"];
         }
-        
+        if (actionName) {
+            
+            if (interfaceBuilderName) {
+                
+                Class actionClass = NSClassFromString(actionName);
+                showControllers = @[[[actionClass alloc] initWithNibName:actionName bundle:nil]];
+                
+            }else if(className){
+                
+                Class actionClass = NSClassFromString(actionName);
+                showControllers = @[[actionClass new]];
+                
+            }else if(storyBoardName){
+                
+                UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyBoardName bundle:[NSBundle mainBundle]];
+                UIViewController * vc;
+                if (storyBoardIdentify) {
+                    vc  = [storyboard instantiateViewControllerWithIdentifier:storyBoardIdentify];
+                }else{
+                    vc = [storyboard instantiateInitialViewController];
+                }
+                if (vc) {
+                    showControllers = @[vc];
+                }
+            }
+        }
     }
     
-    if (showControllers && [showControllers count] && actionName) {
+    
+    if (showControllers && [showControllers count]) {
         
-        for (NSNumber * key in self.dictControllers.allKeys) {
-            NSArray<__kindof UIViewController *> * _showControllers_ = self.dictControllers[key];
-            if (_showControllers_.firstObject == self.navigationRoot.viewControllers.firstObject) {
-                self.dictControllers[key] = self.navigationRoot.viewControllers;
-                self.buttons[key.intValue].status = PYButtonEnumNormal;
-                break;
-            }
+        if (!showControllers || showControllers.count == 0) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有要显示的Controler" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+            return;
         }
         
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationRoot.view cache:NO];
+        if (![showControllers.firstObject isKindOfClass:[UIViewController class]]) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"不能显示非Controller的数据" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+            return;
+        }
         
-        [self.navigationRoot setViewControllers:showControllers];
+        if ([showControllers.firstObject isKindOfClass:[UINavigationController class]]) {
+            self.navigationRoot = showControllers.firstObject;
+            showControllers = self.navigationRoot.viewControllers;
+        }
         
-        [UIView commitAnimations];
+        [UIApplication sharedApplication].keyWindow.rootViewController = self.navigationRoot;
+        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
         
-        self.dictControllers[@(button.index)] = showControllers;
-        [button setStatus:PYButtonEnumSelected];
+        [UIView setAnimationDuration:1];
+        [self.navigationRoot setViewControllers:showControllers];        for (PYButton * btn in self.buttons) {
+            [btn setStatus:btn == button ? PYButtonEnumSelected : PYButtonEnumNormal];
+        }
+        self.dictControllers[currentIndex] = showControllers;
+        self.dictControllers[currentNaindex] = @[self.navigationRoot];
     }
 
 }

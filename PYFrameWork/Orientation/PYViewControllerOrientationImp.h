@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Utile/UIViewController+HookOrientation.h>
+#import "UIViewController+HookOrientation.h"
 
 @interface PYViewControllerOrientationImp : NSObject<UIViewcontrollerHookOrientationDelegate>
 @property (nonatomic) NSTimeInterval timeIntervalOrientation;

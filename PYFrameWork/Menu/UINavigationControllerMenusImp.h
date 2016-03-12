@@ -6,10 +6,12 @@
 //  Copyright © 2016年 wlpiaoyi. All rights reserved.
 //
 
-#import <Utile/UIViewController+HookView.h>
+#import "UIViewController+HookView.h"
 #import "PYFrameWorkParam.h"
 
 @interface UINavigationControllerMenusImp : NSObject<UIViewcontrollerHookViewDelegate>
+
+@property (nonatomic) NSUInteger showIndex;
 
 @property (nonatomic, copy, nullable) NSDictionary<NSNumber *, NSDictionary<NSString *, id> *> * menusAction;
 

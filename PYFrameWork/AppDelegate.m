@@ -22,9 +22,9 @@
     
     [PYFrameWork orientationWithSupportedInterface:UIInterfaceOrientationMaskAllButUpsideDown preferredInterfaceOrientation:UIInterfaceOrientationPortrait];
     id a = @[
-             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"},
+             @{NCHVMenuStoryBoardName:@"Main"},
              @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc02"},
-             @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"},
+             @{NCHVMenuStoryBoardName:@"Main"},
              @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc02"},
              @{NCHVMenuStoryBoardName:@"Main", NCHVMenuStoryBoardIdentify:@"vc"}
              ];

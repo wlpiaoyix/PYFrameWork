@@ -9,6 +9,8 @@
 #import "UINavgationBarImp.h"
 #import <Utile/PYUtile.h>
 #import <Utile/PYHook.h>
+#import <Utile/UIView+Expand.h>
+#import <Utile/PYViewAutolayoutCenter.h>
 @interface UINavgationBarImp()
 @property (nonatomic, strong) PYNavigationBarTools * ntbTools;
 @end
@@ -39,11 +41,9 @@
         return;
     }
     
-    
     [target.navigationController setNavigationBarHidden:NO];
-    
     if (IOS7_OR_LATER) {
-        [[UIApplication sharedApplication] setStatusBarStyle:[target preferredStatusBarStyle] animated:NO];
+        [[UIApplication sharedApplication] setStatusBarStyle:[target preferredStatusBarStyle]];
     }
     
     [self.ntbTools setDefaultStyle:target.navigationController.navigationBar];
@@ -63,6 +63,13 @@
         return;
     }
     [UINavgationBarImp checkRootViewWithVc:target.navigationController];
+    target.view.frameHeight = target.navigationController.view.frameHeight;
+//    UIView * view = target.view.superview;
+//    NSArray<__kindof NSLayoutConstraint *> *constraints = target.view.superview.constraints;
+//    for (NSLayoutConstraint * lc in constraints) {
+//        
+//        NSLog(@"");
+//    }
 }
 
 -(void) beforeExcutePreferredStatusBarStyle:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
@@ -85,6 +92,10 @@
     }
     
     [PYUtile getCurrentController].view.frame = rectCurView;
+
+}
+
+-(void) dealloc{
 
 }
 

@@ -26,6 +26,12 @@
     self.navigationItem.rightBarButtonItem = bbi;
     [self.view setCornerRadiusAndBorder:1 borderWidth:1 borderColor:[UIColor redColor]];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
 -(void) setIsHiddenEnd{
     _isHidden = !_isHidden;
     [self.navigationController setToolbarHidden:_isHidden animated:YES];

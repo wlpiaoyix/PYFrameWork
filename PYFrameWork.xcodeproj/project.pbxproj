@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152263DC1C8FDCAA00963D5F /* UIViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263D71C8FDCAA00963D5F /* UIViewController+Hook.m */; };
+		152263DD1C8FDCAA00963D5F /* UIViewController+HookOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263D91C8FDCAA00963D5F /* UIViewController+HookOrientation.m */; };
+		152263DE1C8FDCAA00963D5F /* UIViewController+HookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263DB1C8FDCAA00963D5F /* UIViewController+HookView.m */; };
+		152263E01C92831800963D5F /* UIViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263D71C8FDCAA00963D5F /* UIViewController+Hook.m */; };
+		152263E21C92831800963D5F /* UIViewController+HookOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263D91C8FDCAA00963D5F /* UIViewController+HookOrientation.m */; };
+		152263E41C92831800963D5F /* UIViewController+HookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 152263DB1C8FDCAA00963D5F /* UIViewController+HookView.m */; };
 		1529D3FB1C48F32700905A92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1529D3FA1C48F32700905A92 /* main.m */; };
 		1529D3FE1C48F32700905A92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1529D3FD1C48F32700905A92 /* AppDelegate.m */; };
 		1529D4011C48F32700905A92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1529D4001C48F32700905A92 /* ViewController.m */; };
@@ -49,6 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152263D61C8FDCAA00963D5F /* UIViewController+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hook.h"; sourceTree = "<group>"; };
+		152263D71C8FDCAA00963D5F /* UIViewController+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hook.m"; sourceTree = "<group>"; };
+		152263D81C8FDCAA00963D5F /* UIViewController+HookOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HookOrientation.h"; sourceTree = "<group>"; };
+		152263D91C8FDCAA00963D5F /* UIViewController+HookOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HookOrientation.m"; sourceTree = "<group>"; };
+		152263DA1C8FDCAA00963D5F /* UIViewController+HookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HookView.h"; sourceTree = "<group>"; };
+		152263DB1C8FDCAA00963D5F /* UIViewController+HookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HookView.m"; sourceTree = "<group>"; };
 		1529D3F61C48F32700905A92 /* PYFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1529D3FA1C48F32700905A92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1529D3FC1C48F32700905A92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +124,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152263D51C8FDCAA00963D5F /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				152263D61C8FDCAA00963D5F /* UIViewController+Hook.h */,
+				152263D71C8FDCAA00963D5F /* UIViewController+Hook.m */,
+				152263D81C8FDCAA00963D5F /* UIViewController+HookOrientation.h */,
+				152263D91C8FDCAA00963D5F /* UIViewController+HookOrientation.m */,
+				152263DA1C8FDCAA00963D5F /* UIViewController+HookView.h */,
+				152263DB1C8FDCAA00963D5F /* UIViewController+HookView.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
 		1529D3ED1C48F32700905A92 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +162,7 @@
 		1529D3F81C48F32700905A92 /* PYFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				152263D51C8FDCAA00963D5F /* Hook */,
 				15B110621C746AA400033370 /* Navigation */,
 				153002391C68862C0003128C /* Menu */,
 				157E9FE31C64CEA90049C14D /* Orientation */,
@@ -336,13 +362,16 @@
 				1529D3FE1C48F32700905A92 /* AppDelegate.m in Sources */,
 				153002341C6884280003128C /* PYViewControllerOrientationImp.m in Sources */,
 				1593637E1C6C363900D40074 /* PYButton.m in Sources */,
+				152263DE1C8FDCAA00963D5F /* UIViewController+HookView.m in Sources */,
 				15B110651C746ACB00033370 /* UINavgationBarImp.m in Sources */,
 				15DCA30C1C619B4A00F0A8B9 /* PYNavigationBarTools.m in Sources */,
 				1529D3FB1C48F32700905A92 /* main.m in Sources */,
+				152263DD1C8FDCAA00963D5F /* UIViewController+HookOrientation.m in Sources */,
 				15EC28E01C4C8A0F00032949 /* ViewController02.m in Sources */,
 				15B1105D1C74543600033370 /* PYFrameWorkParam.m in Sources */,
 				15DCA3121C61AAD800F0A8B9 /* PYToolBarView.m in Sources */,
 				153002381C6885770003128C /* PYViewControllerLoadedOrientationImp.m in Sources */,
+				152263DC1C8FDCAA00963D5F /* UIViewController+Hook.m in Sources */,
 				15DCA30F1C61A2B900F0A8B9 /* PYBarButtonItemTools.m in Sources */,
 				157E9FED1C64CEFF0049C14D /* UIViewController(piofo).m in Sources */,
 				1530023C1C68862C0003128C /* UINavigationControllerMenusImp.m in Sources */,
@@ -354,6 +383,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152263E01C92831800963D5F /* UIViewController+Hook.m in Sources */,
+				152263E21C92831800963D5F /* UIViewController+HookOrientation.m in Sources */,
+				152263E41C92831800963D5F /* UIViewController+HookView.m in Sources */,
 				15A6D8211C7569F5008EFBF2 /* UINavgationBarImp.m in Sources */,
 				15A6D8221C7569F5008EFBF2 /* UINavigationControllerMenusImp.m in Sources */,
 				15A6D8231C7569F5008EFBF2 /* PYButton.m in Sources */,

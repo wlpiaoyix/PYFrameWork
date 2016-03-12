@@ -97,7 +97,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-lR-lSd">
                                 <rect key="frame" x="0.0" y="20" width="320" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="kSQ-OP-vGZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="uZ1-Jh-Kqc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,8 +107,8 @@
                                 <rect key="frame" x="139" y="423" width="42" height="57"/>
                                 <color key="backgroundColor" red="0.3672242094" green="0.77509407720000001" blue="0.40724642849999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="94n-bK-wL7"/>
-                                    <constraint firstAttribute="height" constant="57" id="Zpu-3R-2nt"/>
+                                    <constraint firstAttribute="width" constant="42" id="bHm-jb-Cs3"/>
+                                    <constraint firstAttribute="height" constant="57" id="dAj-fv-BYW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,11 +117,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sQZ-mN-VED" firstAttribute="top" secondItem="1SE-00-7PL" secondAttribute="bottom" id="HSJ-IC-d9G"/>
-                            <constraint firstItem="Kec-lR-lSd" firstAttribute="leading" secondItem="sMf-ya-Asi" secondAttribute="leading" id="I2c-7I-OTb"/>
-                            <constraint firstItem="1SE-00-7PL" firstAttribute="centerX" secondItem="sMf-ya-Asi" secondAttribute="centerX" id="ZdB-EF-vVY"/>
-                            <constraint firstAttribute="trailing" secondItem="Kec-lR-lSd" secondAttribute="trailing" id="hXg-hB-hEd"/>
-                            <constraint firstItem="Kec-lR-lSd" firstAttribute="top" secondItem="Ed2-qz-93u" secondAttribute="bottom" id="vgh-tX-i56"/>
+                            <constraint firstItem="Kec-lR-lSd" firstAttribute="leading" secondItem="sMf-ya-Asi" secondAttribute="leading" id="Fom-Gu-slR"/>
+                            <constraint firstItem="1SE-00-7PL" firstAttribute="centerX" secondItem="sMf-ya-Asi" secondAttribute="centerX" id="NQa-BZ-pEl"/>
+                            <constraint firstItem="sQZ-mN-VED" firstAttribute="top" secondItem="1SE-00-7PL" secondAttribute="bottom" id="VPA-nf-XCd"/>
+                            <constraint firstItem="Kec-lR-lSd" firstAttribute="top" secondItem="Ed2-qz-93u" secondAttribute="bottom" id="e7J-YI-wgW"/>
+                            <constraint firstAttribute="trailing" secondItem="Kec-lR-lSd" secondAttribute="trailing" id="lxp-P4-urp"/>
                         </constraints>
                     </view>
                 </viewController>

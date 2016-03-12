@@ -29,12 +29,15 @@ static id<UIViewcontrollerHookViewDelegate> xUINavigationBarImp;
 }
 
 +(void) orientationWithSupportedInterface:(NSUInteger) supportedInterface preferredInterfaceOrientation:(UIInterfaceOrientation) preferredInterfaceOrientation{
+    if (!xPYViewControllerOrientationImp) {
+        xPYViewControllerOrientationImp =[PYViewControllerOrientationImp new];
+    }
+    ((PYViewControllerOrientationImp *)xPYViewControllerOrientationImp).supportedInterface = supportedInterface;
+    ((PYViewControllerOrientationImp *)xPYViewControllerOrientationImp).preferredInterfaceOrientation = preferredInterfaceOrientation;
     
-    xPYViewControllerOrientationImp =[PYViewControllerOrientationImp new];
-    ((PYViewControllerOrientationImp *)xPYViewControllerLoadedOrientationImp).supportedInterface = supportedInterface;
-    ((PYViewControllerOrientationImp *)xPYViewControllerLoadedOrientationImp).preferredInterfaceOrientation = preferredInterfaceOrientation;
-    
-    xPYViewControllerLoadedOrientationImp = [PYViewControllerLoadedOrientationImp new];
+    if (!xPYViewControllerLoadedOrientationImp) {
+        xPYViewControllerLoadedOrientationImp = [PYViewControllerLoadedOrientationImp new];
+    }
     
     [UIViewController addDelegateOrientation:xPYViewControllerOrientationImp];
     [UIViewController addDelegateView:xPYViewControllerLoadedOrientationImp];
@@ -42,15 +45,20 @@ static id<UIViewcontrollerHookViewDelegate> xUINavigationBarImp;
 }
 
 +(void) toolBarWithMenusInfo:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nonnull)menusInfo menusAction:(NSDictionary<NSNumber *,NSDictionary<NSString *,NSString *> *> * _Nonnull)menusAction{
-    xUINavigationControllerMenusImp =[UINavigationControllerMenusImp new];
+    if (!xUINavigationControllerMenusImp) {
+        xUINavigationControllerMenusImp =[UINavigationControllerMenusImp new];
+    }
     [UIViewController addDelegateView:xUINavigationControllerMenusImp];
 
     ((UINavigationControllerMenusImp*)xUINavigationControllerMenusImp).menusInfo = menusInfo;
     ((UINavigationControllerMenusImp*)xUINavigationControllerMenusImp).menusAction = menusAction;
+    ((UINavigationControllerMenusImp*)xUINavigationControllerMenusImp).showIndex = 0;
 }
 
 +(void) navigatonBarWithBlock:(void (^_Nonnull) (UIViewController * _Nonnull curVc, PYNavigationBarTools * _Nonnull ntbTools)) blok{
-    xUINavigationBarImp = [UINavgationBarImp new];
+    if (!xUINavigationBarImp) {
+        xUINavigationBarImp = [UINavgationBarImp new];
+    }
     ((UINavgationBarImp*)xUINavigationBarImp).blockSetNavationBar = blok;
     [UIViewController addDelegateView:xUINavigationBarImp];
 }
