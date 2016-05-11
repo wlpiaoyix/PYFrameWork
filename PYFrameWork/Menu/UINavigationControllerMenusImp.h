@@ -10,10 +10,7 @@
 #import "PYFrameWorkParam.h"
 
 @interface UINavigationControllerMenusImp : NSObject<UIViewcontrollerHookViewDelegate>
-
 @property (nonatomic) NSUInteger showIndex;
-
 @property (nonatomic, copy, nullable) NSDictionary<NSNumber *, NSDictionary<NSString *, id> *> * menusAction;
-
 @property (nonatomic, copy, nullable) NSArray<NSDictionary<NSString *, NSString *> *> * menusInfo;
 @end

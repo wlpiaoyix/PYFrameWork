@@ -32,10 +32,10 @@
     }
     return self;
 }
--(void) beforeExcuteViewDidLoad:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
+-(void) beforeExcuteViewWillAppear:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{
     (*isExcute) = true;
 }
--(void) afterExcuteViewDidLoadWithTarget:(nonnull UIViewController *) target{
+-(void) afterExcuteViewWillAppearWithTarget:(nonnull UIViewController *) target{
     
     if (!target.navigationController) {
         return;
@@ -64,12 +64,6 @@
     }
     [UINavgationBarImp checkRootViewWithVc:target.navigationController];
     target.view.frameHeight = target.navigationController.view.frameHeight;
-//    UIView * view = target.view.superview;
-//    NSArray<__kindof NSLayoutConstraint *> *constraints = target.view.superview.constraints;
-//    for (NSLayoutConstraint * lc in constraints) {
-//        
-//        NSLog(@"");
-//    }
 }
 
 -(void) beforeExcutePreferredStatusBarStyle:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target{

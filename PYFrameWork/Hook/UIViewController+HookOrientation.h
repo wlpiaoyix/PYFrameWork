@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ hook 转屏 delegate
+ */
 @protocol UIViewcontrollerHookOrientationDelegate<NSObject>
 @optional
 //重写父类方法判断是否可以旋转
@@ -28,7 +30,9 @@
 -(void) beforeExcuteDidRotateFromInterfaceOrientation:(UIInterfaceOrientation) fromInterfaceOrientation isExcute:(nonnull BOOL *) isExcute target:(nonnull UIViewController *) target;
 -(void) afterExcuteDidRotateFromInterfaceOrientation:(UIInterfaceOrientation) fromInterfaceOrientation target:(nonnull UIViewController *) target;
 @end
-
+/**
+ hook 转屏的实体
+ */
 @interface UIViewController(HookOrientation)
 +(nullable NSHashTable<id<UIViewcontrollerHookOrientationDelegate>> *) delegateOrientations;
 +(void) addDelegateOrientation:(nullable id<UIViewcontrollerHookOrientationDelegate>) delegateOrientation;
